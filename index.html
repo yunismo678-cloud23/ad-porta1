@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مبوابة إعلانية مجانية</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="مبوابة إعلانات مبوبة مجانية باللغة العربية.">
+</head>
+<body>
+  <header class="header">
+    <div class="inner container">
+      <div class="brand">مبوابة</div>
+      <div class="searchbar">
+        <input id="q" type="search" placeholder="ابحث بالعنوان أو الوصف...">
+        <select id="category" aria-label="التصنيف"></select>
+        <input id="location" type="text" placeholder="الموقع (مثال: القاهرة)">
+      </div>
+      <div class="actions">
+        <a class="btn" href="add.html">+ أضف إعلانًا</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid" id="grid" aria-live="polite"></div>
+    <div class="footer">
+      © <span id="year"></span> مبوابة إعلانية مجانية – استضافة مجانية عبر GitHub Pages أو Netlify.
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>أضف إعلانًا – مبوابة إعلانية مجانية</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="أرسل إعلانك مجانًا للنشر في المبوبة.">
+</head>
+<body>
+  <header class="header">
+    <div class="inner container">
+      <div class="brand">مبوابة</div>
+      <div class="actions">
+        <a class="btn" href="index.html">← الرئيسية</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 style="font-size:22px; margin-top:20px;">إرسال إعلان جديد</h1>
+    <p class="note">هذه نسخة مجانية تعمل بدون خادم (Static). لإضافة الإعلانات هناك خياران سهلان:</p>
+    <ol class="note">
+      <li><b>تحرير ملف <code>ads.json</code></b> وإضافة إعلانك (أبسط طريقة).</li>
+      <li>أو أنشئ <b>نموذج جوجل</b> واجعل الردود تُرسل إلى بريدك، ثم أضفها يدويًا إلى <code>ads.json</code>.</li>
+    </ol>
+
+    <section class="form">
+      <label>مثال صيغة الإعلان لإضافتها في <code>ads.json</code>:</label>
+      <textarea readonly>
+{
+  "id": 5,
+  "title": "عنوان الإعلان",
+  "description": "وصف مختصر وجذاب للإعلان.",
+  "category": "خدمات",
+  "location": "القاهرة",
+  "price": "السعر أو اتركه فارغًا",
+  "contact": {"phone": "01xxxxxxxxx", "whatsapp": "01xxxxxxxxx", "email": "your@email.com"},
+  "images": ["images/sample.jpg"],
+  "date": "2025-08-14"
+}
+      </textarea>
+
+      <p class="note">للتواصل المباشر، يمكنك أيضًا نشر بريد أو واتساب عام: </p>
+      <div class="contact">
+        <a class="badge" href="mailto:you@example.com">✉️ بريدك</a>
+        <a class="badge" href="https://wa.me/201234567890" target="_blank" rel="noopener">🟢 واتسابك</a>
+      </div>
+
+      <p class="small">نصيحة: ضع صور الإعلانات في مجلد <code>images/</code> واكتب مسارها داخل <code>images</code> في كل إعلان.</p>
+    </section>
+  </main>
+
+  <script>
+    // لا شيء هنا الآن
+  </script>
+</body>
+</html>
