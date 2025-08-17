@@ -1,4 +1,69 @@
-[
+[// ========== بيانات إعلانات تجريبية ==========
+const ads = [
+  {
+    title: "شقة للبيع في القاهرة",
+    price: "850,000 ج.م",
+    image: "https://via.placeholder.com/400x200?text=شقة+للبيع",
+    link: "#"
+  },
+  {
+    title: "سيارة تويوتا كورولا 2020",
+    price: "450,000 ج.م",
+    image: "https://via.placeholder.com/400x200?text=سيارة+للبيع",
+    link: "#"
+  },
+  {
+    title: "وظيفة شاغرة: مطور ويب",
+    price: "راتب مميز",
+    image: "https://via.placeholder.com/400x200?text=وظيفة",
+    link: "#"
+  },
+  {
+    title: "موبايل سامسونج جالاكسي",
+    price: "12,500 ج.م",
+    image: "https://via.placeholder.com/400x200?text=موبايل",
+    link: "#"
+  }
+];
+
+// ========== دالة عرض الإعلانات ==========
+function displayAds(list) {
+  const container = document.getElementById("ads");
+  container.innerHTML = "";
+
+  if (list.length === 0) {
+    container.innerHTML = "<p>⚠️ لا توجد نتائج.</p>";
+    return;
+  }
+
+  list.forEach(ad => {
+    const card = document.createElement("div");
+    card.className = "ad";
+    card.innerHTML = `
+      <a href="${ad.link}" target="_blank">
+        <img src="${ad.image}" alt="${ad.title}">
+        <div class="info">
+          <div class="title">${ad.title}</div>
+          <div class="price">${ad.price}</div>
+        </div>
+      </a>
+    `;
+    container.appendChild(card);
+  });
+}
+
+// ========== البحث ==========
+function searchAds() {
+  const term = document.getElementById("searchBox").value.toLowerCase();
+  const results = ads.filter(ad => ad.title.toLowerCase().includes(term));
+  displayAds(results);
+}
+
+// ========== تشغيل أول مرة ==========
+window.onload = () => {
+  displayAds(ads);
+};
+
   {
     "id": 1,
     "title": "شقة للإيجار 3 غرف – مدينة نصر",
